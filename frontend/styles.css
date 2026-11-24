@@ -1,0 +1,490 @@
+/* ==========================================================================
+   ADAPTIVE LOGISTICS INTELLIGENCE SYSTEM - EXECUTIVE PRESENTATION STYLESHEET
+   Engineered for Maximum Readability, Zero Eye-Strain, and High-DPI Projectors
+   ========================================================================== */
+
+:root {
+    --bg-main: #f8fafc;
+    --card-bg: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #1e293b;
+    --text-muted: #475569;
+    --border-color: #cbd5e1;
+    --primary-blue: #1d4ed8;
+    --primary-blue-hover: #1e40af;
+    --accent-blue: #2563eb;
+    --success-green: #15803d;
+    --success-bg: #dcfce7;
+    --warning-yellow: #b45309;
+    --warning-bg: #fef3c7;
+    --danger-red: #b91c1c;
+    --danger-bg: #fee2e2;
+    --radius-md: 10px;
+    --radius-lg: 14px;
+}
+
+/* ==========================================================================
+   1. GLOBAL SYSTEM TYPOGRAPHY (ROOT BASE SCALE)
+   ========================================================================== */
+
+html, body, [class*="css"], .stApp, [data-testid="stAppViewContainer"], [data-testid="stMain"] {
+    font-size: 19px !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    color: #0f172a !important;
+    background-color: #f8fafc !important;
+    line-height: 1.65 !important;
+}
+
+/* Page Titles */
+.main-title, 
+h1, 
+[data-testid="stMarkdownContainer"] h1,
+div[data-testid="stMarkdownContainer"] .main-title {
+    font-size: 2.75rem !important;
+    font-weight: 900 !important;
+    color: #0f172a !important;
+    margin-top: 0.8rem !important;
+    margin-bottom: 0.45rem !important;
+    letter-spacing: -0.035em !important;
+    line-height: 1.25 !important;
+}
+
+/* Page Subtitles */
+.sub-title, 
+[data-testid="stMarkdownContainer"] p.sub-title,
+div[data-testid="stMarkdownContainer"] .sub-title {
+    font-size: 1.38rem !important;
+    font-weight: 600 !important;
+    color: #334155 !important;
+    margin-bottom: 1.8rem !important;
+    line-height: 1.6 !important;
+}
+
+/* Major Headings */
+h2, [data-testid="stMarkdownContainer"] h2 {
+    font-size: 2.25rem !important;
+    font-weight: 850 !important;
+    color: #0f172a !important;
+    margin-top: 1.4rem !important;
+    margin-bottom: 0.7rem !important;
+    letter-spacing: -0.02em !important;
+}
+
+h3, [data-testid="stMarkdownContainer"] h3 {
+    font-size: 1.8rem !important;
+    font-weight: 800 !important;
+    color: #1e293b !important;
+    margin-top: 1.2rem !important;
+    margin-bottom: 0.6rem !important;
+}
+
+h4, [data-testid="stMarkdownContainer"] h4 {
+    font-size: 1.48rem !important;
+    font-weight: 750 !important;
+    color: #1e293b !important;
+    margin-top: 1.0rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Paragraphs & Markdown Content */
+p, 
+li, 
+[data-testid="stMarkdownContainer"] p, 
+[data-testid="stMarkdownContainer"] li {
+    font-size: 1.25rem !important;
+    color: #1e293b !important;
+    line-height: 1.65 !important;
+}
+
+/* ==========================================================================
+   2. SIDEBAR NAVIGATION - ULTRA-READABLE HIGH-VISIBILITY CARDS
+   ========================================================================== */
+
+[data-testid="stSidebar"], 
+section[data-testid="stSidebar"] {
+    background-color: #ffffff !important;
+    border-right: 2.5px solid #e2e8f0 !important;
+    min-width: 340px !important;
+}
+
+/* Section Header: NAVIGATION */
+[data-testid="stSidebar"] [data-testid="stRadio"] > label,
+[data-testid="stSidebar"] [data-testid="stRadio"] > label p,
+[data-testid="stSidebar"] [data-testid="stRadio"] > label span,
+[data-testid="stSidebar"] [data-testid="stRadio"] > label div,
+section[data-testid="stSidebar"] label[data-testid="stWidgetLabel"] p {
+    font-size: 1.5rem !important;
+    font-weight: 900 !important;
+    color: #0f172a !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 0.85rem !important;
+    display: block !important;
+}
+
+/* Radio Group Gap */
+[data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] {
+    gap: 0.75rem !important;
+}
+
+/* Sidebar Navigation Items (Card Style) */
+[data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label,
+section[data-testid="stSidebar"] div[role="radiogroup"] > label {
+    padding: 0.95rem 1.25rem !important;
+    border-radius: 12px !important;
+    background-color: #f8fafc !important;
+    border: 2px solid #cbd5e1 !important;
+    margin-bottom: 0.55rem !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] > label:hover,
+section[data-testid="stSidebar"] div[role="radiogroup"] > label:hover {
+    background-color: #eff6ff !important;
+    border-color: #3b82f6 !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2) !important;
+    transform: translateX(4px) !important;
+}
+
+/* Radio Text Inside Navigation - Large, Bold & High Contrast */
+[data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] label div[data-testid="stMarkdownContainer"] p,
+[data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] label p,
+[data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] label span,
+[data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] label div,
+section[data-testid="stSidebar"] div[role="radiogroup"] label * {
+    font-size: 1.35rem !important;
+    font-weight: 750 !important;
+    color: #0f172a !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+}
+
+/* Radio Circle Icon Enlargement */
+[data-testid="stSidebar"] [data-testid="stRadio"] div[role="radiogroup"] label > div:first-child,
+section[data-testid="stSidebar"] div[role="radiogroup"] label > div:first-child {
+    transform: scale(1.5) !important;
+    margin-right: 1.1rem !important;
+}
+
+/* ==========================================================================
+   3. NATIVE STREAMLIT METRICS (st.metric) - APPLIES TO EVERY PAGE
+   ========================================================================== */
+
+[data-testid="stMetric"] {
+    background: #ffffff !important;
+    border: 2px solid #cbd5e1 !important;
+    border-radius: 14px !important;
+    padding: 1.45rem 1.35rem !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06) !important;
+    transition: all 0.22s ease-in-out !important;
+}
+
+[data-testid="stMetric"]:hover {
+    box-shadow: 0 10px 22px -3px rgba(0, 0, 0, 0.1) !important;
+    border-color: #94a3b8 !important;
+    transform: translateY(-2px) !important;
+}
+
+[data-testid="stMetricLabel"],
+[data-testid="stMetricLabel"] p,
+[data-testid="stMetricLabel"] div {
+    font-size: 1.25rem !important;
+    font-weight: 850 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.065em !important;
+    color: #475569 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+[data-testid="stMetricValue"],
+[data-testid="stMetricValue"] div {
+    font-size: 3.2rem !important;
+    font-weight: 950 !important;
+    color: #0f172a !important;
+    line-height: 1.15 !important;
+}
+
+[data-testid="stMetricDelta"],
+[data-testid="stMetricDelta"] div {
+    font-size: 1.2rem !important;
+    font-weight: 750 !important;
+}
+
+/* Custom HTML Metric Cards (Executive Dashboard) */
+.metric-container {
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 1.35rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: all 0.22s ease-in-out;
+}
+
+.metric-container:hover {
+    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2.5px);
+    border-color: #94a3b8;
+}
+
+.metric-label {
+    font-size: 1.22rem !important;
+    font-weight: 850 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #475569;
+    margin-bottom: 0.5rem;
+}
+
+.metric-value {
+    font-size: 3.2rem !important;
+    font-weight: 950 !important;
+    color: #0f172a;
+    line-height: 1.15;
+}
+
+.metric-footer {
+    font-size: 1.18rem !important;
+    font-weight: 650;
+    color: #64748b;
+    margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   4. INTERACTIVE TABS (st.tabs) - APPLIES TO EVERY PAGE
+   ========================================================================== */
+
+[data-baseweb="tab-list"] {
+    gap: 0.85rem !important;
+    border-bottom: 3.5px solid #e2e8f0 !important;
+    margin-bottom: 1.7rem !important;
+}
+
+[data-baseweb="tab"],
+[data-baseweb="tab"] p,
+[data-baseweb="tab"] span,
+[data-baseweb="tab"] div {
+    font-size: 1.36rem !important;
+    font-weight: 800 !important;
+    padding: 0.95rem 1.65rem !important;
+    border-radius: 12px 12px 0 0 !important;
+    color: #475569 !important;
+    transition: all 0.18s ease-in-out !important;
+}
+
+[data-baseweb="tab"]:hover {
+    color: #1d4ed8 !important;
+    background-color: #f1f5f9 !important;
+}
+
+[data-baseweb="tab"][aria-selected="true"],
+[data-baseweb="tab"][aria-selected="true"] p,
+[data-baseweb="tab"][aria-selected="true"] span,
+[data-baseweb="tab"][aria-selected="true"] div {
+    color: #1d4ed8 !important;
+    border-bottom: 4px solid #1d4ed8 !important;
+    background-color: #eff6ff !important;
+}
+
+/* ==========================================================================
+   5. EXPANDERS (st.expander) - APPLIES TO EVERY PAGE
+   ========================================================================== */
+
+[data-testid="stExpander"] {
+    border: 2px solid #cbd5e1 !important;
+    border-radius: 14px !important;
+    background-color: #ffffff !important;
+    margin-bottom: 1.3rem !important;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03) !important;
+}
+
+[data-testid="stExpander"] summary,
+[data-testid="stExpander"] summary p,
+[data-testid="stExpander"] summary span,
+[data-testid="stExpander"] summary div,
+.streamlit-expanderHeader {
+    font-size: 1.38rem !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    padding: 0.9rem 1.35rem !important;
+}
+
+[data-testid="stExpander"] div[data-testid="stExpanderDetails"] {
+    padding: 1.3rem !important;
+}
+
+/* ==========================================================================
+   6. BUTTONS (st.button, st.form_submit_button) - APPLIES TO EVERY PAGE
+   ========================================================================== */
+
+.stButton > button,
+.stButton > button p,
+.stButton > button span,
+.stButton > button div,
+button[kind="primary"],
+button[kind="secondary"],
+[data-testid="stBaseButton-secondary"],
+[data-testid="stBaseButton-primary"] {
+    background-color: #1d4ed8 !important;
+    color: #ffffff !important;
+    font-size: 1.28rem !important;
+    font-weight: 800 !important;
+    border-radius: 12px !important;
+    border: none !important;
+    padding: 0.85rem 1.85rem !important;
+    box-shadow: 0 2px 5px rgba(29, 78, 216, 0.22) !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.stButton > button:hover,
+button[kind="primary"]:hover,
+button[kind="secondary"]:hover,
+[data-testid="stBaseButton-secondary"]:hover,
+[data-testid="stBaseButton-primary"]:hover {
+    background-color: #1e40af !important;
+    box-shadow: 0 8px 18px -2px rgba(29, 78, 216, 0.4) !important;
+    transform: translateY(-2px) !important;
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   7. INPUTS, SELECTBOXES, NUMBER INPUTS, SLIDERS & FORM CONTROLS
+   ========================================================================== */
+
+label,
+[data-testid="stWidgetLabel"],
+[data-testid="stWidgetLabel"] p,
+[data-testid="stWidgetLabel"] span,
+.stSelectbox label, 
+.stTextInput label, 
+.stNumberInput label, 
+.stTextArea label, 
+.stSlider label,
+.stRadio label,
+.stSelectbox label p, 
+.stTextInput label p, 
+.stNumberInput label p, 
+.stTextArea label p, 
+.stSlider label p,
+.stRadio label p {
+    font-size: 1.32rem !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.stSelectbox div[data-baseweb="select"] *, 
+.stTextInput input, 
+.stNumberInput input, 
+.stTextArea textarea {
+    font-size: 1.24rem !important;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    color: #0f172a !important;
+}
+
+.stSlider div[data-baseweb="slider"] {
+    font-size: 1.24rem !important;
+    font-weight: 750 !important;
+}
+
+/* ==========================================================================
+   8. ALERT BOXES (st.info, st.success, st.warning, st.error)
+   ========================================================================== */
+
+[data-testid="stAlert"],
+[data-testid="stAlert"] p,
+[data-testid="stAlert"] span,
+[data-testid="stAlert"] div {
+    font-size: 1.28rem !important;
+    font-weight: 600 !important;
+    line-height: 1.6 !important;
+    border-radius: 12px !important;
+}
+
+/* ==========================================================================
+   9. CAPTIONS & HELPER TEXT
+   ========================================================================== */
+
+.stCaption,
+[data-testid="stCaptionContainer"],
+[data-testid="stCaptionContainer"] p {
+    font-size: 1.18rem !important;
+    font-weight: 650 !important;
+    color: #475569 !important;
+    line-height: 1.55 !important;
+}
+
+/* ==========================================================================
+   10. TABLES & DATAFRAMES (st.dataframe, st.table)
+   ========================================================================== */
+
+[data-testid="stDataFrame"] *,
+div[data-testid="stTable"] * {
+    font-size: 1.2rem !important;
+}
+
+[data-testid="stDataFrame"] div[role="columnheader"] {
+    font-size: 1.26rem !important;
+    font-weight: 850 !important;
+    color: #0f172a !important;
+}
+
+/* ==========================================================================
+   11. STATUS BADGES & CHIPS
+   ========================================================================== */
+
+.badge {
+    display: inline-block;
+    padding: 0.55rem 1.2rem;
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    border-radius: 10px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.badge-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1.5px solid #fde68a;
+}
+
+.badge-assigned {
+    background-color: #e0e7ff;
+    color: #3730a3;
+    border: 1.5px solid #c7d2fe;
+}
+
+.badge-intransit {
+    background-color: #dbeafe;
+    color: #1e40af;
+    border: 1.5px solid #bfdbfe;
+}
+
+.badge-delivered {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1.5px solid #bbf7d0;
+}
+
+.badge-cancelled {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1.5px solid #fecaca;
+}
+
+.badge-urgent {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: 2px solid #ef4444;
+}
+
+/* Code blocks */
+code {
+    font-size: 1.18rem !important;
+    font-weight: 750 !important;
+}
